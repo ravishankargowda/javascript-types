@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<p>Math.round(x) returns the value of x rounded to its nearest integer:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = Math.round(4.5);
+</script><br>
+
+<h2>JavaScript Math</h2>
+
+<p>Math.floor(Math.random() * 100)) returns a random integer between 0 and 99 
+(both included):</p>
+
+<p id="demo1"></p>
+
+<script>
+document.getElementById("demo1").innerHTML =
+Math.floor(Math.random() * 100);
+</script><br>
+
+
+<p>Display the Boolean value of false:</p>
+
+<p id="demo2"></p>
+
+<script>
+let x = false;
+document.getElementById("demo2").innerHTML = Boolean(x);
+</script><br>
+
+
+<p>Input your age and click the button:</p>
+
+<input id="age" value="18" />
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo3"></p>
+
+<script>
+function myFunction() {
+  let voteable;
+  let age = Number(document.getElementById("age").value);
+  if (isNaN(age)) {
+    voteable = "Input is not a number";
+  } else {
+    voteable = (age < 18) ? "Too young" : "Old enough";
+  }
+  document.getElementById("demo3").innerHTML = voteable + " to vote";
+}
+</script><br>
+
+
+<h2>JavaScript Iterables</h2>
+<p>Iterate over an Array:</p>
+
+<p id="demo4"></p>
+
+<script>
+// Create aa Array
+const letters = ["a","b","c"];
+
+// List all Elements
+let text = "";
+for (const x of letters) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo4").innerHTML = text;
+</script><br>
+
+
+<p>Add values to a Set:</p>
+
+<p id="demo5"></p>
+
+<script>
+// Create a Set
+const letters = new Set();
+
+// Add Values to the Set
+letters.add("a");
+letters.add("b");
+letters.add("c");
+
+// Display set.size
+document.getElementById("demo5").innerHTML = letters.size;
+</script><br>
+
+
+<p>Using Map.set():</p>
+
+<p id="demo6"></p>
+
+<script>
+// Create a Map
+const fruits = new Map();
+
+// Set Map Values
+fruits.set("apples", 500);
+fruits.set("bananas", 300);
+fruits.set("oranges", 200);
+
+document.getElementById("demo6").innerHTML = fruits.get("apples");
+</script><br>
+
+<h2>The JavaScript constructor Property</h2>
+
+<p>The constructor property returns the constructor function for a variable or an 
+object.</p>
+
+<p id="demo7"></p>
+
+<script>
+document.getElementById("demo7").innerHTML = 
+  "john".constructor + "<br>" +
+  (3.14).constructor + "<br>" +
+  false.constructor + "<br>" +
+  [1,2,3,4].constructor + "<br>" +
+  {name:'john', age:34}.constructor + "<br>" +
+  new Date().constructor + "<br>" +
+  function () {}.constructor;
+</script><br>
+
+
+<h2>The JavaScript typeof Operator</h2>
+
+<p>The typeof operator returns the type of a variable or expression:</p>
+
+<p id="ravi"></p>
+
+<script>
+let y = "John";
+let x = + y;
+document.getElementById("ravi").innerHTML = typeof y + "<br>" + typeof x;
+</script><br>
+
+<h2>JavaScript Bitwise OR</h2>
+
+
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="welcome">Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("demo").innerHTML;
+  document.getElementById("welcome").innerHTML =
+  text.replace(/microsoft/i, "W3Schools");
+}
+</script><br>
+
+
+
+<p id="bengalore"></p>
+
+<script>
+var x; // Declare x
+x = 5; // Assign 5 to x
+
+elem = document.getElementById("bengalore"); // Find an element 
+elem.innerHTML = x;           // Display x in the element
+</script>
+
+</body>
+</html>
